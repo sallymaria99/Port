@@ -1,0 +1,721 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;300;400;500;700&display=swap");
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAVMENY*/
+nav {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #395144;
+  padding-left: 2em;
+  padding-right: 3em;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  font-size: 25px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+nav ul a {
+  padding: 0.5em;
+}
+
+nav ul a:hover {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  font-weight: bold;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.ham {
+  display: none;
+  cursor: pointer;
+  margin-bottom: 20%;
+  margin-top: 5%;
+  position: fixed;
+}
+
+/* Vit linje under ´Hem´- i navbaren */
+.active {
+  border-bottom: 1.5px solid white;
+}
+
+/* Så att den vita border-bottom försvinner när man har Hover{black:underline}*/
+.active:hover {
+  border-bottom: none;
+}
+
+.logo {
+  transition: 0.3s;
+  margin-right: auto;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #395144;
+  color: #f0ebce;
+  font-size: large;
+  bottom: 0;
+  left: 0;
+  height: 15vh;
+}
+
+.fbtn {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.linkedin {
+  align-items: center;
+  background-color: #0a66c2;
+  border: 0;
+  border-radius: 100px;
+  /*box-sizing: border-box;*/
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 500px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+}
+
+.linkedin:hover,
+.linkedin:focus {
+  background-color: #16437e;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.linkedin:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.instagram {
+  align-items: center;
+  background-color: #c32aa3;
+  border: 0;
+  border-radius: 100px;
+  /*box-sizing: border-box;*/
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+}
+
+.instagram:hover,
+.instagram:focus {
+  background-color: #881d72;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.instagram:active {
+  background: #4e1041;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.facebook {
+  align-items: center;
+  background-color: #3b5998;
+  border: 0;
+  border-radius: 100px;
+  /*box-sizing: border-box;*/
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+}
+
+.facebook:hover,
+.facebook:focus {
+  background-color: #23355b;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.facebook:active {
+  background: #17233c;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+/* HEM */
+
+.section {
+  background-color: Floralwhite;
+}
+
+.section-container {
+  min-height: 70vh;
+  max-width: var(--max-width);
+  margin: 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 3, 1fr;
+  gap: 0.5rem;
+}
+.content {
+  grid-column: 2;
+}
+
+/* "Hej" */
+.subtitle {
+  grid-column: 2;
+  text-align: end;
+  justify-content: center;
+  letter-spacing: 2px;
+  color: black;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  margin-top: 2vh;
+  font-family: "Open Sans", sans-serif;
+  font-size: xx-large;
+  position: static;
+}
+
+/*Im Sally Stenegärd*/
+.title {
+  grid-column: 2;
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 3rem;
+  color: #003300; /*#564256*/
+  font-family: "Montserrat";
+  margin: 6vw 0 2vw;
+  position: static;
+}
+
+.under {
+  font-weight: 500;
+  grid-column: 2;
+  margin: 0 0 2vh 2vw vh;
+  font-size: 2rem;
+  font-family: "Open Sans";
+  color: #003333;
+}
+
+.get {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 2vw;
+  position: static;
+  color: #333300;
+}
+
+a {
+  color: #003333;
+  text-decoration: none;
+}
+
+.arrow {
+  text-align: center;
+  margin: 8% 50% 0 0;
+  font-size: 55px;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* knapparna */
+.btn {
+  align-items: center;
+  gap: 2rem;
+  grid-column: 2;
+  margin-bottom: 3vw;
+}
+
+.btn button {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid #09223b;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Bilden */
+.sally {
+  display: grid;
+  place-items: center;
+  grid-column: 3 / 4;
+  grid-row: 1;
+  margin-top: 50%;
+}
+
+.sally img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+/* PORTFOLIO */
+
+.main {
+  background-color: Floralwhite;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*Rubrik*/
+.tidslinje {
+  text-align: center;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 60px;
+  margin-bottom: 2%;
+  color: #040d12;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CV-knapp */
+.cvbtn {
+  margin-bottom: 4vw;
+  display: flex;
+  justify-content: center;
+}
+
+.cvbtn button {
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding: 1.5rem 2.9rem;
+  outline: none;
+  border: 1px solid #09223b;
+  border-radius: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#cv {
+  background-color: #183d3d;
+  color: white;
+  line-height: 20px;
+}
+
+#cv:hover {
+  background-color: #5c8374;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/*Panelerna*/
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+  width: 100%;
+}
+
+.timeline li {
+  margin-bottom: 50px;
+  position: relative;
+  display: flex;
+}
+
+.timeline .panel {
+  width: 36%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: #adc4ce;
+  color: black;
+  box-shadow: 2px 2px 2px grey, -2px -2px 22px grey;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: larger;
+  font-family: "Open Sans";
+}
+
+.timeline p {
+  padding: 0 20px 10px 20px;
+  font-size: x-large;
+}
+
+.timeline summary {
+  display: block;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  padding: 20px;
+  margin-bottom: 0px;
+  transition: all 600ms cubic-bezier(0.2, 1, 0.3, 1);
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.timeline .panel[open] summary {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.timeline summary:hover {
+  background: #96b6c5;
+  color: black;
+}
+
+/* Själva linjen */
+.timeline:before {
+  top: 2%;
+  bottom: 5%;
+  left: 50%;
+  position: absolute;
+  content: "";
+  width: 5px;
+  background-color: #2b1700;
+  box-shadow: 1px 1px 5px black, -1px -1px 5px black;
+}
+
+/* Prickarna på timeline*/
+.timeline li:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  background: whitesmoke;
+  margin-left: -11px;
+  z-index: 99;
+  box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+}
+.timeline li:nth-child(even) {
+  justify-content: flex-end;
+}
+
+/* KONTAKT */
+.kmain {
+  background-color: Floralwhite;
+  height: 70vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+/* Texten ovanför formuläret*/
+.toppen {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-size: larger;
+  line-height: 1.5rem;
+}
+#form {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+.inp {
+  background-color: Linen;
+  padding: 8px;
+  resize: vertical;
+  cursor: pointer;
+  width: 100%;
+}
+.Lform {
+  font-size: large;
+  color: black;
+}
+fieldset {
+  width: 60%;
+  padding: 3vh;
+  border-color: black;
+  border-radius: 10%;
+}
+legend {
+  font-size: x-large;
+  text-align: center;
+}
+/* SUBMIT-knappen */
+#skicka {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding: 1rem 1rem;
+  outline: none;
+  border: 4px solid #1a5d1a;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #7a9d54;
+  margin-top: 10px;
+}
+#skicka:hover {
+  transform: translateY(-2px);
+  background-color: #557a46;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1350px) {
+  .arrow {
+    font-size: 40px;
+    margin: 8% 45% 0 0;
+    transition: 0.4s;
+  }
+}
+
+/* För Navbaren */
+@media screen and (max-width: 750px) {
+  .ham {
+    display: block;
+    font-size: xx-large;
+  }
+
+  nav {
+    height: 30;
+  }
+
+  nav ul {
+    font-size: 1.2em;
+    position: absolute;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    gap: 2em;
+    top: 90px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    transition: 0.5s;
+    z-index: 100;
+  }
+
+  #hamburger[type="checkbox"]:checked ~ ul {
+    left: 0;
+  }
+
+  nav ul a:hover {
+    background-color: #395144;
+  }
+
+  .logo {
+    align-items: center;
+    margin: 0 30% 0 25%;
+  }
+
+  ul {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Hem- sidan */
+  .subtitle {
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+    font-size: xx-large;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-container {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem 5rem 4rem;
+    text-align: center;
+
+    min-height: 70vh;
+  }
+
+  .sally {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5vh;
+
+    height: auto;
+    width: auto;
+  }
+
+  .arrow {
+    font-size: 30px;
+    margin: 8% 0 0 0;
+  }
+
+  .action-btns {
+    margin: auto;
+    align-items: center;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kmain {
+    min-height: 100vh;
+  }
+
+  fieldset {
+    width: 60%;
+    height: 40%;
+    margin-bottom: 5em;
+  }
+
+  .fbtn {
+    margin-bottom: 10px;
+    max-width: 900px;
+    min-height: 90px;
+  }
+
+  footer {
+    min-height: 29%;
+  }
+}
+
+/* Så ingen text åker utanför sidorna och orsakar horisontellt skroll (-störigt om det sker) samt snyggt även för den absolut minsta skärmen!*/
+@media screen and (max-width: 330px) {
+  .logo {
+    align-items: center;
+    margin: 15% 30% 0 8%;
+  }
+  .title {
+    font-size: 11vw;
+  }
+
+  .under {
+    font-size: 9vw;
+  }
+
+  .action-btns {
+    align-items: center;
+    margin: 3vw;
+  }
+}

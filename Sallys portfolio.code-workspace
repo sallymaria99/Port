@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../HTML & CSS/Lektioner"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "portfolio"
+  }
+}
